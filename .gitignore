@@ -1,0 +1,6 @@
+wallpaper-pc/
+wallpaper-phone/
+__pycache__/
+*.py[cod]
+*.har
+network*.txt

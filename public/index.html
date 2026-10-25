@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="A clean, scrollable library of desktop and phone wallpapers.">
+  <title>NOCTRA Free — Wallpapers for Every Screen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="gallery-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="NOCTRA Free home"><span class="brand-mark">N</span><span>NOCTRA<br>FREE</span></a>
+    <div class="top-note"><span class="live-dot"></span> A collection for your screens</div>
+    <a class="top-link" href="#gallery">EXPLORE <span aria-hidden="true">↘</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span>01</span> THE WALLPAPER LIBRARY</p>
+        <h1 id="hero-title">Make your<br><em>screen yours.</em></h1>
+        <p class="hero-intro">A considered collection for the screens you look at every day. Find your frame, open it, and save the image.</p>
+        <a class="hero-cta" href="#gallery">Browse the collection <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-grid"></div>
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-back"><span>FRAME<br>YOUR<br>WORLD</span></div>
+        <div class="art-card art-card-front"><div class="art-sun"></div><div class="art-mountain mountain-back"></div><div class="art-mountain mountain-front"></div><div class="art-caption">A QUIETER<br>PLACE TO LAND</div></div>
+        <div class="art-tag">DESKTOP / MOBILE<br>HI-RES FILES</div>
+        <span class="art-index">NO. 001 — ∞</span>
+      </div>
+      <div class="hero-foot"><span>SCROLL TO FIND YOUR WALLPAPER</span><span>01 / 02</span></div>
+    </section>
+
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span>02</span> FIND YOUR FORMAT</p><h2 id="gallery-title">The collection<span class="heading-period">.</span></h2></div>
+        <p class="section-note">Choose a screen type. One collection stays active at a time.</p>
+      </div>
+      <div class="toolbar">
+        <div class="segmented" role="group" aria-label="Wallpaper type">
+          <button class="filter-button is-active" type="button" data-type="pc" aria-pressed="true"><span class="filter-icon">▰</span> PC <span class="filter-count" id="pc-count">—</span></button>
+          <button class="filter-button" type="button" data-type="phone" aria-pressed="false"><span class="filter-icon">▯</span> MOBILE <span class="filter-count" id="phone-count">—</span></button>
+        </div>
+        <label class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a number or file name" autocomplete="off"><kbd>⌘ K</kbd></label>
+      </div>
+      <div class="gallery-meta"><span id="result-count">Loading collection…</span><span>SELECT A FRAME TO PREVIEW</span></div>
+      <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden><span class="empty-mark">∅</span><h3>No wallpapers found</h3><p>Try another search, or switch screen type.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark">N</span><span>NOCTRA<br>FREE</span></a><span>MADE FOR THE SCREENS THAT MATTER.</span><a href="#top" class="back-top">BACK TO TOP ↑</a></footer>
+
+  <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="preview-title">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Close preview">×</button>
+    <div class="preview-image-wrap"><img id="preview-image" alt="Selected wallpaper preview"></div>
+    <div class="preview-details"><div class="preview-heading"><p class="eyebrow" id="preview-kind">PC WALLPAPER</p><h2 id="preview-title">Wallpaper 001</h2><p class="preview-resolution" id="preview-resolution"></p></div><div class="format-downloads" id="format-downloads" aria-label="Download this wallpaper in a format"></div></div>
+  </dialog>
+</body>
+</html>
