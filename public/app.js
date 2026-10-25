@@ -38,6 +38,9 @@
       link.className = 'format-download';
       link.href = variant.src;
       link.download = `noctra-${item.filename}-${key}.webp`;
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.title = 'If your browser does not download this file, it will open the image so you can save it from the browser.';
       const name = document.createElement('span');
       name.className = 'format-name';
       name.textContent = label;
